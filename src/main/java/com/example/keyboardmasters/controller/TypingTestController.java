@@ -1,5 +1,7 @@
 package com.example.keyboardmasters.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +30,29 @@ public class TypingTestController {
         typingTest.setUser(user);
         typingTestService.save(typingTest);
         return "redirect:/users/" + userId; // Assuming you have a user details page
+    }
+
+    @PostMapping("/typing-test")
+    public String saveTypingTest(TypingTest typingTest, Principal principal) {
+        // Load the currently authenticated user
+        String username = principal.getName();
+        User user = userService.findUserByUsername(username);
+
+        // Set the user for the typing test
+        typingTest.setUser(user);
+
+        // Save the typing test
+        typingTestService.save(typingTest);
+
+        // TODO: I want to stay on the same page and do not reload page
+        // TODO: look at chat gpt ajax
+        return "typing_test";
+    }
+
+    @GetMapping("/typing-test")
+    public String typingTestForm(Model model) {
+        model.addAttribute("typingTest", new TypingTest());
+        return "typing_test";
     }
 
     // add more methods as needed
