@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit User</title>
+  </head>
+  <body>
+    <!-- Editing removes role of admin -->
+    <h1>Edit User</h1>
+    <form th:action="@{/admin/edit}" method="post">
+      <input type="hidden" name="id" th:value="${user.id}" />
+      <input
+        type="text"
+        name="username"
+        th:value="${user.username}"
+        placeholder="Username"
+        readonly
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="New Password"
+        required
+      />
+      <input type="submit" value="Update User" />
+    </form>
+  </body>
+</html>

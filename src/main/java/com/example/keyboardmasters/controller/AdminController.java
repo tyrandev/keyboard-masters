@@ -37,12 +37,12 @@ public class AdminController {
     public String editUserForm(@PathVariable("id") Long id, Model model) {
         User user = userService.findById(id);
         model.addAttribute("user", user);
-        return "edit_user";
+        return "admin/edit_user";
     }
 
     @PostMapping("/edit")
     public String editUser(User user) {
-        userService.save(user); // Assumes userService.save can update existing users.
+        userService.save(user);
         return "redirect:/admin/";
     }
 

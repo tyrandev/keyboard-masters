@@ -32,6 +32,8 @@
           <form th:action="@{/admin/delete/{id}(id=${user.id})}" method="post">
             <input type="submit" value="Delete" />
           </form>
+          <!-- Edit Button -->
+          <a th:href="@{/admin/edit/{id}(id=${user.id})}">Edit</a>
         </td>
       </tr>
     </table>
