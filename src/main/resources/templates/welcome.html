@@ -12,7 +12,7 @@
     <!-- Condition to check if user hasRole admin -->
     <div th:if="${#httpServletRequest.isUserInRole('ROLE_ADMIN')}">
       <br />
-      <a th:href="@{/admin}">Do to admin dashboard</a>
+      <a th:href="@{/admin/}">Do to admin dashboard</a>
     </div>
   </body>
 </html>

@@ -20,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/", "/register").permitAll() // Allow access to root URL and register page
                 .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/admin/*").hasRole("ADMIN")
                 .antMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
