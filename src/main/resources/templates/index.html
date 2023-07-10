@@ -5,14 +5,17 @@
   </head>
   <body>
     <h1>Welcome to main page</h1>
-    <h2>Login</h2>
-    <form action="/login" method="post">
-      <input type="text" name="username" placeholder="Username" />
-      <input type="password" name="password" placeholder="Password" />
-      <input type="submit" value="Log In" />
-    </form>
-    <h3>You do not have an account?</h3>
-    <a href="/register">Sign Up</a>
+    <!-- Login form visible only when we are not logged in -->
+    <div th:if="${#authorization.expression('!isAuthenticated()')}">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="submit" value="Log In" />
+      </form>
+      <h3>You do not have an account?</h3>
+      <a href="/register">Sign Up</a>
+    </div>
 
     <div th:if="${param.error}">Invalid username or password.</div>
   </body>
