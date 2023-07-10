@@ -18,7 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/", "/index", "/register").permitAll()
+                .antMatchers("/", "/register").permitAll() // Allow access to root URL and register page
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()

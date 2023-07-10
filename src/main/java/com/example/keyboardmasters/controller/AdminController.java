@@ -18,8 +18,8 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String admin(Model model) {
-        List<User> users = userService.getAllUsers();
-        model.addAttribute("users", users); 
+        List<User> users = userService.getAllUsers(); // Uncomment this line
+        model.addAttribute("users", users); // Uncomment this line
         return "admin";
     }
 }
