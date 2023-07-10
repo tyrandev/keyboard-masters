@@ -29,7 +29,7 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.role = "user"; // Set default value in the constructor as well
+        this.role = "ROLE_" + role.toUpperCase();
     }
 
     public User(String username, String password, String role) {
