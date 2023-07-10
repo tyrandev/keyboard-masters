@@ -2,6 +2,9 @@ package com.example.keyboardmasters.controller;
 
 import com.example.keyboardmasters.model.User;
 import com.example.keyboardmasters.service.UserService;
+
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
@@ -55,6 +58,20 @@ public class UserController {
     @GetMapping("/account")
     public String welcome() {
         return "account";
+    }
+
+    @GetMapping("/change-password")
+    public String changePasswordForm(Model model, Principal principal) {
+        String username = principal.getName();
+        User user = userService.findUserByUsername(username); // using new method
+        model.addAttribute("user", user);
+        return "change_password";
+    }
+
+    @PostMapping("/change-password")
+    public String changePassword(User user) {
+        userService.save(user); // Assumes userService.save can update existing users.
+        return "redirect:/account";
     }
 
 }

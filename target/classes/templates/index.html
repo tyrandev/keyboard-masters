@@ -18,6 +18,7 @@
     </div>
 
     <div th:if="${#authorization.expression('isAuthenticated()')}">
+      <a href="/account">my account</a>
       <form th:action="@{/logout}" method="post">
         <input type="submit" value="Log out" />
       </form>
