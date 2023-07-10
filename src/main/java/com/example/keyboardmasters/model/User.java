@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -25,6 +28,9 @@ public class User {
     private String password;
 
     private String role = "ROLE_USER";
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<TypingTest> typingTests = new ArrayList<>();
 
     public User(String username, String password) {
         this.username = username;
