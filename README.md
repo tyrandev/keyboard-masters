@@ -1,2 +1,2 @@
-# keyboard-masters
- 
+#keyboard masters
+Application to practice fast typing

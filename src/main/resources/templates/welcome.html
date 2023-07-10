@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h1>Welcome, <span th:text="${#httpServletRequest.remoteUser}"></span>!</h1>
+    <form th:action="@{/logout}" method="post">
+      <input type="submit" value="Log out" />
+    </form>
+
+    <!-- Condition to check if user hasRole admin -->
+    <div th:if="${#httpServletRequest.isUserInRole('ROLE_ADMIN')}">
+      <br />
+      <a th:href="@{/admin}">Do to admin dashboard</a>
+    </div>
+  </body>
+</html>
