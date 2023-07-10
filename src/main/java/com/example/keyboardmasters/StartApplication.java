@@ -20,9 +20,9 @@ public class StartApplication {
 	public CommandLineRunner setupDefaultUser(UserService userService, BCryptPasswordEncoder passwordEncoder) {
 		return args -> {
 			if (userService.findByUsername("admin") == null) {
-				User admin = new User("admin", "admin", "admin"); // passwordEncoder.encode("admin")
+				User admin = new User("admin", "admin", "ROLE_ADMIN"); // passwordEncoder.encode("admin")
 				userService.save(admin);
-				User user = new User("user", "user", "user"); // passwordEncoder.encode("admin")
+				User user = new User("user", "user", "ROLE_USER"); // passwordEncoder.encode("admin")
 				userService.save(user);
 			}
 		};

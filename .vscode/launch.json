@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-StartApplication<keyboard-masters>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.keyboardmasters.StartApplication",
+      "projectName": "keyboard-masters",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
