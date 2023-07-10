@@ -52,9 +52,9 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/account")
     public String welcome() {
-        return "welcome";
+        return "account";
     }
 
 }
