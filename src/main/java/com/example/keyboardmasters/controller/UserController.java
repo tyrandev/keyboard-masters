@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping("/")
     public String showDefaultPage() {
-        return "default";
+        return "index";
     }
 
     @GetMapping("/register")
