@@ -31,5 +31,4 @@ public class TypingTestService {
         return typingTestRepository.findAllByUserId(userId);
     }
 
-    // add more methods as needed
 }

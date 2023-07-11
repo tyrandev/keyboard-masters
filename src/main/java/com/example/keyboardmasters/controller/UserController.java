@@ -1,9 +1,11 @@
 package com.example.keyboardmasters.controller;
 
+import com.example.keyboardmasters.model.TypingTest;
 import com.example.keyboardmasters.model.User;
 import com.example.keyboardmasters.service.UserService;
 
 import java.security.Principal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -53,11 +55,6 @@ public class UserController {
     @GetMapping("/index")
     public String showSecondLoginForm() {
         return "index";
-    }
-
-    @GetMapping("/account")
-    public String welcome() {
-        return "account";
     }
 
     @GetMapping("/change-password")

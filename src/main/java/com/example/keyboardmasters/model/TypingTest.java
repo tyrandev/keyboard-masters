@@ -32,6 +32,6 @@ public class TypingTest {
     private int allLetters;
     private int incorrectLetters;
 
-    // @CreationTimestamp
-    // private LocalDateTime createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }

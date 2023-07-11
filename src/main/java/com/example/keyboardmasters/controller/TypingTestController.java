@@ -1,6 +1,7 @@
 package com.example.keyboardmasters.controller;
 
 import java.security.Principal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -54,5 +55,13 @@ public class TypingTestController {
         return "typing_test";
     }
 
-    // add more methods as needed
+    @GetMapping("/account")
+    public String account(Principal principal, Model model) {
+        String username = principal.getName();
+        User user = userService.findUserByUsername(username);
+        List<TypingTest> typingTests = typingTestService.getByUserId(user.getId());
+        model.addAttribute("typingTests", typingTests);
+        return "account";
+    }
+
 }

@@ -16,5 +16,25 @@
     <!-- Link to change password form -->
     <a th:href="@{/change-password}">Change password</a>
     <a th:href="@{/typing-test}">Typing test</a>
+    <!-- Display all the user's typing tests -->
+    <div th:each="test : ${typingTests}">
+      <h2>Test ID: <span th:text="${test.id}"></span></h2>
+      <p>Time in Seconds: <span th:text="${test.timeInSeconds}"></span></p>
+      <p>
+        Clean Typing Speed: <span th:text="${test.cleanTypingSpeed}"></span>
+      </p>
+      <p>Raw Typing Speed: <span th:text="${test.rawTypingSpeed}"></span></p>
+      <p>Accuracy: <span th:text="${test.accuracy}"></span></p>
+      <p>All Words: <span th:text="${test.allWords}"></span></p>
+      <p>Incorrect Words: <span th:text="${test.incorrectWords}"></span></p>
+      <p>All Letters: <span th:text="${test.allLetters}"></span></p>
+      <p>Incorrect Letters: <span th:text="${test.incorrectLetters}"></span></p>
+      <p>
+        <!-- Test Date:
+        <span
+          th:text="${#dates.format(test.createdAt, 'dd-MM-yyyy HH:mm')}"
+        ></span> -->
+      </p>
+    </div>
   </body>
 </html>
