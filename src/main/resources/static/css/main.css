@@ -130,6 +130,7 @@ body {
   color: #fff;
   font-size: 40px;
   padding: 12px 17px 17px 17px;
+  word-spacing: 0.3em;
 }
 
 .word-input-container {
@@ -211,6 +212,7 @@ body {
   height: 100%;
   border-radius: 15px;
   padding: 7px 10px 7px 18px;
+  font-size: 26px;
 }
 
 .down-left-container p {
