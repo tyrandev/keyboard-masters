@@ -44,8 +44,6 @@ public class TypingTestController {
         // Save the typing test
         typingTestService.save(typingTest);
 
-        // TODO: I want to stay on the same page and do not reload page
-        // TODO: look at chat gpt ajax
         return "typing_test";
     }
 

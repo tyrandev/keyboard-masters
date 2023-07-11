@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Typing Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/typing-test.js" defer></script>
   </head>
   <body>
     <h1>Typing Test</h1>
-    <form th:action="@{/typing-test}" method="post">
+    <form th:action="@{/typing-test}" method="post" id="typingTestForm">
       <label for="timeInSeconds">Time in Seconds:</label><br />
       <input
         type="number"
