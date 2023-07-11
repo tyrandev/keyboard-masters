@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: rgb(0, 0, 28); */
+  background-color: #000;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.section-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+#logo {
+  color: #fff;
+  font-size: 35px;
+}
+
+.login-register-container {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  width: 100%;
+  padding: 0px 40px 8px 0px;
+}
+
+.login-register-container p {
+  color: #e3e3e3;
+}
+
+.menu-container {
+  height: 50px;
+}
+
+.main-menu {
+  /* background: linear-gradient(white, #7b7b7b); */
+  /* background: linear-gradient(#ededed, #7b7b7b); */
+  background: #333333;
+  border-radius: 16px;
+  height: 100%;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  flex: 1;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100%;
+  border: #000 1.5px solid;
+  font-size: 19px;
+}
+
+.main-section {
+  /* background: linear-gradient(#ededed, #a6a6a6); */
+  background: #333333;
+  margin-top: 29px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 15px;
+  height: 80vh;
+}
+
+.main-section-inner-container {
+  padding: 10px 250px 10px 250px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Change to horizontal layout */
+}
+
+.main-upper-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  /* background-color: lightblue; */
+}
+
+.main-center-container {
+  width: 100%;
+  height: 100%;
+  flex: 5;
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-down-container {
+  width: 100%;
+  height: 100%;
+  flex: 3;
+  /* background-color: lightpink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.time-options-container {
+  background-color: rgb(15, 15, 15);
+  height: 70%;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.word-display {
+  flex: 8;
+  border-radius: 15px;
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+  font-size: 40px;
+  padding: 12px 17px 17px 17px;
+}
+
+.word-input-container {
+  margin-top: 10px;
+  flex: 2;
+  border-radius: 15px;
+  /* background-color: rgb(15, 15, 15); */
+  display: flex;
+  /* padding: 15px 15px 15px 15px; */
+}
+
+.word-input {
+  flex: 30;
+  width: 100%;
+  height: 100%;
+}
+
+.redo-button-container {
+  flex: 4;
+  width: 100%;
+  height: 100%;
+}
+
+#word-input {
+  border-radius: 15px;
+  width: 99%;
+  height: 100%;
+  font-size: 30px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  border-color: transparent;
+}
+
+#redo-button {
+  border: rgb(15, 15, 15);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  margin-right: 10px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+#redo-button:hover {
+  background-color: white;
+  color: rgb(15, 15, 15);
+}
+
+#redo-button:active {
+  background-color: gray;
+  color: white;
+}
+
+.down-right-container {
+  flex: 1;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  font-size: 22px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  margin-right: 5px;
+  padding: 5px 5px 5px 5px;
+}
+.down-right-container p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.down-left-container {
+  flex: 1;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  font-size: 22px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 7px 10px 7px 18px;
+}
+
+.down-left-container p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.down-left-container table {
+  width: 100%;
+}
+
+.down-left-container table .text-column {
+  text-align: right;
+}
+
+.down-left-container table .number-column {
+  text-align: left;
+}
+
+.down-right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 40px 10px 80px;
+}
+
+.word-per-minute-container {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-per-minute-container h1 {
+  font-size: 66px;
+}
+
+.accuracy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accuracy {
+  text-align: center;
+  font-size: 55px;
+}
+
+.raw-speed {
+  font-size: 43px;
+}

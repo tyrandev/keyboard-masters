@@ -44,6 +44,7 @@ var dataTest2 = {
   incorrectLetters: 1110,
 };
 
+// send json named data through ajax
 // $(document).ready(function () {
 //   $("#typingTestForm").on("submit", function (e) {
 //     e.preventDefault();

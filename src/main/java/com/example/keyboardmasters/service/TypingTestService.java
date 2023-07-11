@@ -31,4 +31,8 @@ public class TypingTestService {
         return typingTestRepository.findAllByUserId(userId);
     }
 
+    public List<Object[]> getUsersWithBestTypingSpeed() {
+        return typingTestRepository.findUsersWithBestTypingSpeed();
+    }
+
 }

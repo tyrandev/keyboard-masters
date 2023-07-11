@@ -2,6 +2,7 @@ package com.example.keyboardmasters.controller;
 
 import java.security.Principal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -62,6 +63,34 @@ public class TypingTestController {
         List<TypingTest> typingTests = typingTestService.getByUserId(user.getId());
         model.addAttribute("typingTests", typingTests);
         return "account";
+    }
+
+    @GetMapping("/leaderboard")
+    public String leaderboard(Model model) {
+        List<Object[]> data = typingTestService.getUsersWithBestTypingSpeed();
+        List<UserTypingSpeed> users = data.stream()
+                .map(obj -> new UserTypingSpeed((String) obj[0], (Double) obj[1]))
+                .collect(Collectors.toList());
+        model.addAttribute("users", users);
+        return "leaderboard";
+    }
+
+    public static class UserTypingSpeed {
+        private String username;
+        private double bestTypingSpeed;
+
+        public UserTypingSpeed(String username, double bestTypingSpeed) {
+            this.username = username;
+            this.bestTypingSpeed = bestTypingSpeed;
+        }
+
+        public String getUsername() {
+            return username;
+        }
+
+        public double getBestTypingSpeed() {
+            return bestTypingSpeed;
+        }
     }
 
 }
