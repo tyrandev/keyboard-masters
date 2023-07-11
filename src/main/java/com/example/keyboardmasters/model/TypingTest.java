@@ -1,6 +1,11 @@
 package com.example.keyboardmasters.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.*;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import lombok.*;
 
 @Entity
@@ -26,4 +31,7 @@ public class TypingTest {
     private int incorrectWords;
     private int allLetters;
     private int incorrectLetters;
+
+    // @CreationTimestamp
+    // private LocalDateTime createdAt;
 }

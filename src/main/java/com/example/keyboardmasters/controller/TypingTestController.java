@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.keyboardmasters.model.TypingTest;
@@ -33,7 +34,7 @@ public class TypingTestController {
     }
 
     @PostMapping("/typing-test")
-    public String saveTypingTest(TypingTest typingTest, Principal principal) {
+    public String saveTypingTest(@RequestBody TypingTest typingTest, Principal principal) {
         // Load the currently authenticated user
         String username = principal.getName();
         User user = userService.findUserByUsername(username);
