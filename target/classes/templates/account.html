@@ -17,24 +17,38 @@
     <a th:href="@{/change-password}">Change password</a>
     <a th:href="@{/typing-test}">Typing test</a>
     <!-- Display all the user's typing tests -->
-    <div th:each="test : ${typingTests}">
-      <h2>Test ID: <span th:text="${test.id}"></span></h2>
-      <p>Time in Seconds: <span th:text="${test.timeInSeconds}"></span></p>
-      <p>
-        Clean Typing Speed: <span th:text="${test.cleanTypingSpeed}"></span>
-      </p>
-      <p>Raw Typing Speed: <span th:text="${test.rawTypingSpeed}"></span></p>
-      <p>Accuracy: <span th:text="${test.accuracy}"></span></p>
-      <p>All Words: <span th:text="${test.allWords}"></span></p>
-      <p>Incorrect Words: <span th:text="${test.incorrectWords}"></span></p>
-      <p>All Letters: <span th:text="${test.allLetters}"></span></p>
-      <p>Incorrect Letters: <span th:text="${test.incorrectLetters}"></span></p>
-      <p>
-        <!-- Test Date:
-        <span
-          th:text="${#dates.format(test.createdAt, 'dd-MM-yyyy HH:mm')}"
-        ></span> -->
-      </p>
-    </div>
+    <h2>History of tests</h2>
+    <table>
+      <thead>
+        <tr>
+          <!-- <th>Test ID</th> -->
+          <th>Time in Seconds</th>
+          <th>Clean Typing Speed</th>
+          <th>Raw Typing Speed</th>
+          <th>Accuracy</th>
+          <th>All Words</th>
+          <th>Incorrect Words</th>
+          <th>All Letters</th>
+          <th>Incorrect Letters</th>
+          <!-- Uncomment the following line to display the Test Date column -->
+          <!-- <th>Test Date</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="test : ${typingTests}">
+          <!-- <td th:text="${test.id}"></td> -->
+          <td th:text="${test.timeInSeconds}"></td>
+          <td th:text="${test.cleanTypingSpeed}"></td>
+          <td th:text="${test.rawTypingSpeed}"></td>
+          <td th:text="${test.accuracy}"></td>
+          <td th:text="${test.allWords}"></td>
+          <td th:text="${test.incorrectWords}"></td>
+          <td th:text="${test.allLetters}"></td>
+          <td th:text="${test.incorrectLetters}"></td>
+          <!-- Uncomment the following lines to display the Test Date column -->
+          <!-- <td th:text="${#dates.format(test.createdAt, 'dd-MM-yyyy HH:mm')}"></td> -->
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
