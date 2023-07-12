@@ -112,6 +112,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column; /* Change to horizontal layout */
+  /* margin-bottom: 5px; */
 }
 
 .main-upper-container {
@@ -168,7 +169,22 @@ body {
   color: #fff;
   font-size: 40px;
   padding: 12px 17px 17px 17px;
-  word-spacing: 0.3em;
+  /* word-spacing: 0.3em; */
+}
+
+.word-display p {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  /* it was 28 before */
+  font-size: 30px;
+}
+
+.last-paragraph {
+  margin-bottom: 0px;
+}
+
+.developer-info a {
+  color: white;
 }
 
 .word-input-container {

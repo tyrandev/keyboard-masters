@@ -208,7 +208,7 @@ body {
   justify-content: center;
   margin-left: 10px;
   /* !! For typing training */
-  /* display: none;  */
+  display: none;
 }
 
 #timer {
