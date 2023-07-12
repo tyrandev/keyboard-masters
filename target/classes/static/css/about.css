@@ -178,6 +178,10 @@ body {
   font-size: 30px;
 }
 
+.word-display .question-paragraph {
+  margin-bottom: 8px;
+}
+
 .last-paragraph {
   margin-bottom: 10px;
 }

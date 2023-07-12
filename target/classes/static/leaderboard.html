@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <title>Keyboard Masters</title>
   </head>
   <body>
@@ -50,38 +50,26 @@
       <div class="main-section-inner-container">
         <div class="main-upper-container">
           <div class="time-options-container">
-            <p>About</p>
+            <p>Leaderboard</p>
           </div>
         </div>
         <div class="main-center-container">
           <div class="word-display">
-            <p class="question-paragraph">- How typing speed is calculated?</p>
-            <p>
-              Typing speed is calculated by dividing the total number of
-              correctly typed characters by 4.7, which represents the average
-              word length in English. This approach helps to minimize the impact
-              of random factors caused by varying word lengths. By focusing on
-              characters rather than words, we obtain a more precise measurement
-              of typing speed.
-            </p>
-
-            <p class="question-paragraph">- Why this website was created?</p>
-            <p>
-              This website was created with the purpose of offering a
-              professional tool to help individuals learn fast and accurate
-              keyboard typing. Its development aims to provide a platform where
-              users can enhance their typing skills in an efficient and
-              effective manner.
-            </p>
-
-            <p class="question-paragraph">- Who developed this website?</p>
-            <p class="developer-info">
-              It was developed by Jedrzej Tyranowski. Visit his
-              <a href="http://www.tyranowski.org" target="_blank"
-                >personal website</a
-              >
-              for more information.
-            </p>
+            <!-- Leaderboard table -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Username B</th>
+                  <th>est Typing Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="user : ${users}">
+                  <td th:text="${user.username}">user</td>
+                  <td th:text="${user.bestTypingSpeed}">120</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
