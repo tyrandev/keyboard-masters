@@ -59,60 +59,31 @@
         </div>
         <div class="main-center-container">
           <form
-            class="word-display"
             th:action="@{/register}"
             th:object="${user}"
             method="post"
+            class="word-display"
           >
-            <p>E-mail address:</p>
-            <input
-              class="login-form-input"
-              id="email-input"
-              type="text"
-              placeholder=""
-            />
             <p>Username:</p>
             <input
-              class="login-form-input"
-              id="username-input"
               type="text"
               th:field="*{username}"
+              class="login-form-input"
             />
             <p>Password:</p>
             <input
-              class="login-form-input"
-              id="password-input"
               type="password"
               th:field="*{password}"
-            />
-            <p>Repeat password:</p>
-            <input
               class="login-form-input"
-              id="password-check-input"
-              type="password"
             />
-
-            <input class="login-form-button" type="submit" value="Submit" />
-            <div
-              th:if="${registerErrorMessage}"
-              class="error-message error-message-login-register"
-            >
+            <p>
+              <input type="submit" value="Submit" class="login-form-button" />
+              <!-- <input type="reset" value="Reset" /> -->
+            </p>
+            <!-- Error message if username already exists -->
+            <div th:if="${registerErrorMessage}" class="error-message">
               <p th:text="${registerErrorMessage}"></p>
             </div>
-            <!-- !! modifier ça -->
-            <!-- <span id="email-error" class="error-message-login-register"
-              >E-mail address is not correct!</span
-            >
-            <span
-              id="username-password-error"
-              class="error-message-login-register"
-              >Password or username is too short!</span
-            >
-            <span
-              id="password-does-not-match-error"
-              class="error-message-login-register"
-              >Password does not match!</span
-            > -->
           </form>
         </div>
       </div>
