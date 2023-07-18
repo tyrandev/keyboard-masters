@@ -18,7 +18,7 @@
         <h2 id="logo">KeyboardMasters.org</h2>
       </div>
       <div class="login-register-container">
-        <p>
+        <p th:if="${#authorization.expression('!isAuthenticated()')}">
           Click <a href="/login">here</a> to login. You do not have an account?
           <a href="/register">Register now!</a>
         </p>
@@ -91,9 +91,16 @@
               id="password-check-input"
               type="password"
             />
-            <!-- !! modifier ça -->
+
             <input class="login-form-button" type="submit" value="Submit" />
-            <span id="email-error" class="error-message-login-register"
+            <div
+              th:if="${registerErrorMessage}"
+              class="error-message error-message-login-register"
+            >
+              <p th:text="${registerErrorMessage}"></p>
+            </div>
+            <!-- !! modifier ça -->
+            <!-- <span id="email-error" class="error-message-login-register"
               >E-mail address is not correct!</span
             >
             <span
@@ -105,7 +112,7 @@
               id="password-does-not-match-error"
               class="error-message-login-register"
               >Password does not match!</span
-            >
+            > -->
           </form>
         </div>
       </div>

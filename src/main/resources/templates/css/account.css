@@ -8,12 +8,12 @@
 .test-history thead th {
   padding: 10px;
   text-align: center; /* aligns header text to the center */
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   color: white;
 }
 
 .test-history tbody tr {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 .test-history tbody tr td {

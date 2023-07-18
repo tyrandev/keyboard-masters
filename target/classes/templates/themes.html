@@ -19,7 +19,7 @@
         <h2 id="logo">KeyboardMasters.org</h2>
       </div>
       <div class="login-register-container">
-        <p>
+        <p th:if="${#authorization.expression('!isAuthenticated()')}">
           Click <a href="/login">here</a> to login. You do not have an account?
           <a href="/register">Register now!</a>
         </p>
