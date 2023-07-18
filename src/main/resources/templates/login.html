@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title>Login</title>
-</head>
-<body>
-<h1>Login</h1>
-<form action="/login" method="post">
-  <input type="text" name="username" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
-  <input type="submit" value="Log In">
-</form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
+    <!-- <script src="js/login.js" defer></script> -->
+    <script src="js/change-theme.js" defer></script>
+    <script src="js/prevent-default-css.js"></script>
+    <title>Keyboard Masters</title>
+  </head>
+  <body>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
 
-<div th:if="${param.error}">
-  Invalid username or password.
-</div>
-
-</body>
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container">
+          <div class="page-title-container">
+            <p>Login</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <form class="word-display" action="/login" method="post">
+            <p>Username:</p>
+            <input
+              class="login-form-input"
+              name="username"
+              id="username-input"
+              type="text"
+              placeholder=""
+            />
+            <p>Password:</p>
+            <input
+              class="login-form-input"
+              name="password"
+              id="password-input"
+              type="password"
+              placeholder=""
+            />
+            <button class="login-form-button" type="submit" value="Log In">
+              Login
+            </button>
+            <div th:if="${param.error}" class="error-message-login-register">
+              Invalid username or password.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Leaderboard</title>
+  </head>
+  <body>
+    <h1>Typing Test Leaderboard</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Best Clean Typing Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="user : ${users}">
+          <td th:text="${user.username}"></td>
+          <td th:text="${user.bestTypingSpeed}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

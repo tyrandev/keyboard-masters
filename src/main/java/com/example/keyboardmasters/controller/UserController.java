@@ -57,6 +57,26 @@ public class UserController {
         return "index";
     }
 
+    @GetMapping("/typing_training")
+    public String showTypingTraining() {
+        return "typing_training";
+    }
+
+    @GetMapping("/typing_test")
+    public String showTypingTest() {
+        return "typing_test";
+    }
+
+    @GetMapping("/themes")
+    public String showThemes() {
+        return "themes";
+    }
+
+    @GetMapping("/about")
+    public String showAbout() {
+        return "about";
+    }
+
     @GetMapping("/change-password")
     public String changePasswordForm(Model model, Principal principal) {
         String username = principal.getName();

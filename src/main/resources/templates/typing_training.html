@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" href="css/typing-training.css" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}">
+    <link rel="stylesheet" href="css/typing-training-settings.css">
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/typing-training.js" defer></script>
+    <script src="js/training-training-settings.js" defer></script>
+    <script src="js/typing-training-security.js" defer></script>
+    <script src="js/change-theme.js" defer ></script>
+    <script src="js/prevent-default-css.js"></script>
+
+    <title>Keyboard Masters</title>
+  </head>
+  <body>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container desktop-only">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container desktop-only">
+          <div class="page-title-container desktop-only">
+            <p>Typing training</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <div class="word-display"></div>
+          <div class="word-input-container">
+            <div class="word-input">
+              <input
+                id="word-input"
+                type="text"
+                placeholder=" type something to begin..."
+              />
+            </div>
+            <!-- <div class="redo-button-container">
+              <p id="timer">1:00</p>
+              <button id="redo-button">Redo</button>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="main-down-container">
+          <div class="bottom-left-container desktop-only">
+            <div class="word-per-minute-container">
+              <p>
+                
+                <div class="container-words-visible-slider">
+                  <p class="no-margin">Words visible:</p>
+                <input
+                  type="range"
+                  id="words-visible-slider"
+                  min="10"
+                  max="50"
+                  value="20"
+                />
+                <span id="words-visible-value"> 20</span>
+              </div>
+                
+              </p>
+              <p class="no-margin-top">
+                Language:
+                <select
+                  class="select-settings no-margin-top"
+                  id="typing-language"
+                >
+                  <option value="english">English</option>
+                  <option value="polish">Polish</option>
+                  <option value="french">French</option>
+                </select>
+              </p>
+              
+              <p>
+                Dataset:
+                <select
+                  class="select-settings"
+                  id="dataset-select"
+                >
+                  <option value="english-200">english 200</option>
+                  <option value="english-400">english 400</option>
+                  <option value="english-4k" selected>english 4k</option>
+                  <option value="english-11k">english 11k</option>
+                  <option value="english-25k">english 25k</option>
+                  <option value="english-250k">english 250k</option>
+                  <option value="english-420k">english 420k</option>
+                </select>
+              </p>
+
+              <p>
+                <div class="word-length-container">
+                  <p>Word length: </p>
+                  <div id="word-length-slider"></div>
+                  <p>Min: <span id="min-word-length">1</span></p>
+                  <p>Max: <span id="max-word-length">20</span></p>
+                </div>
+              </p>
+
+              <p class="interactive-option">
+                Capital letters:
+                <span id="capital-letters-toggle" class="option-state">Off</span>
+              </p>
+
+              <p class="interactive-option" >
+                Punctuation:
+                <span id="punctuation-toggle" class="option-state">Off</span>
+              </p>
+              <p class="interactive-option">
+                Random numbers:
+                <span id="random-numbers-toggle" class="option-state">Off</span>
+              </p>
+            </div>
+
+          </div>
+          <div class="bottom-right-container">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Clean speed:</td>
+                  <td class="clean-speed-left">NaN</td>
+                </tr>
+                <tr>
+                  <td>Raw speed:</td>
+                  <td class="raw-speed-left">NaN</td>
+                </tr>
+                <tr>
+                  <td>Accuracy:</td>
+                  <td class="accuracy-left">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>All words:</td>
+                  <td class="all-words">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>Incorrect words:</td>
+                  <td class="incorrect-words">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>All letters:</td>
+                  <td class="all-letters">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>Incorrect letters:</td>
+                  <td class="incorrect-letters">NaN</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{css/main.css}" />
+    <link rel="stylesheet" th:href="@{css/about.css}" />
+    <link rel="stylesheet" th:href="@{css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{css/themes/custom-themes.css}" />
+    <script src="js/change-theme.js" defer></script>
+    <script src="js/prevent-default-css.js"></script>
+    <title>Keyboard Masters</title>
+  </head>
+  <body>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container desktop-only">
+        <p>
+          Click <a href="login.html">here</a> to login. You do not have an
+          account?
+          <a href="register.html">Register now!</a>
+        </p>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container">
+          <div class="page-title-container">
+            <p>About</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <div class="word-display">
+            <p class="question-paragraph desktop-only">
+              - How typing speed is calculated?
+            </p>
+            <p class="desktop-only">
+              Typing speed is calculated by dividing the total number of
+              correctly typed characters by 4.7, which represents the average
+              word length in English. This approach helps to minimize the impact
+              of random factors caused by varying word lengths. By focusing on
+              characters rather than words, we obtain a more precise measurement
+              of typing speed.
+            </p>
+
+            <p class="question-paragraph desktop-only">
+              - Why this website was created?
+            </p>
+            <p class="desktop-only">
+              This website was created with the purpose of offering a
+              professional tool to help individuals learn fast and accurate
+              keyboard typing. Its development aims to provide a platform where
+              users can enhance their typing skills in an efficient and
+              effective manner.
+            </p>
+
+            <p class="question-paragraph">- Who developed this website?</p>
+            <p class="developer-info">
+              It was developed by Jędrzej Tyranowski. Visit his
+              <a href="http://www.tyranowski.org" target="_blank"
+                >personal website</a
+              >
+              for more information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

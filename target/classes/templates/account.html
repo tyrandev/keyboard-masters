@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Account</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
+    <link rel="stylesheet" th:href="@{/css/account.css}" />
+    <script src="js/change-theme.js" defer></script>
+    <script src="js/prevent-default-css.js"></script>
+    <title>Keyboard Masters</title>
   </head>
   <body>
-    <h1>Welcome, <span th:text="${#httpServletRequest.remoteUser}"></span>!</h1>
-    <form th:action="@{/logout}" method="post">
-      <input type="submit" value="Log out" />
-    </form>
-    <!-- Condition to check if user hasRole admin -->
-    <div th:if="${#httpServletRequest.isUserInRole('ROLE_ADMIN')}">
-      <br />
-      <a th:href="@{/admin/}">Go to admin dashboard</a>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
     </div>
-    <!-- Link to change password form -->
-    <a th:href="@{/change-password}">Change password</a>
-    <a th:href="@{/typing-test}">Typing test</a>
-    <!-- Display all the user's typing tests -->
-    <h2>History of tests</h2>
-    <table>
-      <thead>
-        <tr>
-          <!-- <th>Test ID</th> -->
-          <th>Time in Seconds</th>
-          <th>Clean Typing Speed</th>
-          <th>Raw Typing Speed</th>
-          <th>Accuracy</th>
-          <th>All Words</th>
-          <th>Incorrect Words</th>
-          <th>All Letters</th>
-          <th>Incorrect Letters</th>
-          <!-- Uncomment the following line to display the Test Date column -->
-          <!-- <th>Test Date</th> -->
-        </tr>
-      </thead>
-      <tbody>
-        <tr th:each="test : ${typingTests}">
-          <!-- <td th:text="${test.id}"></td> -->
-          <td th:text="${test.timeInSeconds}"></td>
-          <td th:text="${test.cleanTypingSpeed}"></td>
-          <td th:text="${test.rawTypingSpeed}"></td>
-          <td th:text="${test.accuracy}"></td>
-          <td th:text="${test.allWords}"></td>
-          <td th:text="${test.incorrectWords}"></td>
-          <td th:text="${test.allLetters}"></td>
-          <td th:text="${test.incorrectLetters}"></td>
-          <!-- Uncomment the following lines to display the Test Date column -->
-          <!-- <td th:text="${#dates.format(test.createdAt, 'dd-MM-yyyy HH:mm')}"></td> -->
-        </tr>
-      </tbody>
-    </table>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container">
+          <div class="page-title-container">
+            <p>Welcome, user</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <div class="word-display">
+            <h2>Test history</h2>
+            <!-- history of typing tests -->
+            <table class="test-history">
+              <thead>
+                <tr>
+                  <!-- <th>Test ID</th> -->
+                  <th>Time in Seconds</th>
+                  <th>Clean Typing Speed</th>
+                  <th>Raw Typing Speed</th>
+                  <th>Accuracy</th>
+                  <th>All Words</th>
+                  <th>Incorrect Words</th>
+                  <th>All Letters</th>
+                  <th>Incorrect Letters</th>
+                  <!-- Uncomment the following line to display the Test Date column -->
+                  <!-- <th>Test Date</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="test : ${typingTests}">
+                  <!-- <td th:text="${test.id}"></td> -->
+                  <td th:text="${test.timeInSeconds}">60</td>
+                  <td th:text="${test.cleanTypingSpeed}">120</td>
+                  <td th:text="${test.rawTypingSpeed}">60</td>
+                  <td th:text="${test.accuracy}">95.25%</td>
+                  <td th:text="${test.allWords}">100</td>
+                  <td th:text="${test.incorrectWords}">25</td>
+                  <td th:text="${test.allLetters}">500</td>
+                  <td th:text="${test.incorrectLetters}">120</td>
+                  <!-- Uncomment the following lines to display the Test Date column -->
+                  <!-- <td th:text="${#dates.format(test.createdAt, 'dd-MM-yyyy HH:mm')}"></td> -->
+                </tr>
+              </tbody>
+            </table>
+            <form th:action="@{/logout}" method="post">
+              <button type="submit" class="logout-button">
+                Click here to log out
+              </button>
+              <!-- Condition to check if user hasRole admin -->
+              <div th:if="${#httpServletRequest.isUserInRole('ROLE_ADMIN')}">
+                <br />
+                <a th:href="@{/admin/}">Go to admin dashboard</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

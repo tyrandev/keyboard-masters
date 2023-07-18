@@ -1,0 +1,16 @@
+google 10k words:
+https://github.com/first20hours/google-10000-english
+more enligh words:
+https://github.com/dwyl/english-words/blob/master/words.txt
+https://github.com/dwyl/english-words
+https://github.com/dolph/dictionary/blob/master/unix-words
+25k english words:
+https://github.com/dolph/dictionary/blob/master/popular.txt
+===============================================================
+French 10k:
+https://github.com/oprogramador/most-common-words-by-language/blob/master/src/resources/french.txt
+French 500 words:
+https://github.com/EddieOne/500-most-used-french-words/blob/master/words.txt
+===================================================================
+All words:
+https://github.com/oprogramador/most-common-words-by-language/tree/master/src/resources

@@ -3,10 +3,13 @@ package com.example.keyboardmasters.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
@@ -18,7 +21,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/", "/register").permitAll() // Allow access to root URL and register page
+                .antMatchers("/", "/login", "/register", "/leaderboard", "/themes", "/about", "/typing_test",
+                        "/typing_training")
+                .permitAll() // Allow access to root URL and register page
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/admin/*").hasRole("ADMIN")
                 .antMatchers("/admin").hasRole("ADMIN")
@@ -45,8 +50,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/word-databases/**");
+        // ,
+        // "https://raw.githubusercontent.com/AndreTyran/words/main/*");
+    }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 }
+
+// @Override
+// public void addCorsMappings(CorsRegistry registry) {
+// registry.addMapping("/**")
+// .allowedOrigins("https://raw.githubusercontent.com/AndreTyran/words/main/*")
+// // replace with the
+// // allowed origins
+// .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS") // allowed
+// request methods
+// .allowCredentials(true)
+// .maxAge(3600)
+// .allowedHeaders("Authorization", "Cache-Control", "Content-Type"); // allowed
+// headers
+// }

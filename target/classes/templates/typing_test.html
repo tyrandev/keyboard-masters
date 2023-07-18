@@ -1,71 +1,121 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Typing Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/typing-training.css}" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/typing-training-settings.css}" />
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/typing-test.js" defer></script>
+    <script src="js/typing-training-security.js" defer></script>
+    <script src="js/change-theme.js" defer></script>
+    <script src="js/prevent-default-css.js"></script>
+
+    <title>Keyboard Masters</title>
   </head>
   <body>
-    <h1>Typing Test</h1>
-    <form th:action="@{/typing-test}" method="post" id="typingTestForm">
-      <label for="timeInSeconds">Time in Seconds:</label><br />
-      <input
-        type="number"
-        id="timeInSeconds"
-        name="timeInSeconds"
-        required
-      /><br />
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container desktop-only">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
 
-      <label for="cleanTypingSpeed">Clean Typing Speed:</label><br />
-      <input
-        type="number"
-        id="cleanTypingSpeed"
-        name="cleanTypingSpeed"
-        step="0.01"
-        required
-      /><br />
-
-      <label for="rawTypingSpeed">Raw Typing Speed:</label><br />
-      <input
-        type="number"
-        id="rawTypingSpeed"
-        name="rawTypingSpeed"
-        step="0.01"
-        required
-      /><br />
-
-      <label for="accuracy">Accuracy:</label><br />
-      <input
-        type="number"
-        id="accuracy"
-        name="accuracy"
-        step="0.01"
-        required
-      /><br />
-
-      <label for="allWords">All Words:</label><br />
-      <input type="number" id="allWords" name="allWords" required /><br />
-
-      <label for="incorrectWords">Incorrect Words:</label><br />
-      <input
-        type="number"
-        id="incorrectWords"
-        name="incorrectWords"
-        required
-      /><br />
-
-      <label for="allLetters">All Letters:</label><br />
-      <input type="number" id="allLetters" name="allLetters" required /><br />
-
-      <label for="incorrectLetters">Incorrect Letters:</label><br />
-      <input
-        type="number"
-        id="incorrectLetters"
-        name="incorrectLetters"
-        required
-      /><br />
-
-      <input type="submit" value="Submit" />
-    </form>
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container desktop-only">
+          <div class="page-title-container desktop-only">
+            <p>Typing test</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <div class="word-display"></div>
+          <div class="word-input-container">
+            <div class="word-input">
+              <input
+                id="word-input"
+                type="text"
+                placeholder=" type something to begin..."
+              />
+            </div>
+            <div class="redo-button-container">
+              <p id="timer">1:00</p>
+              <button id="redo-button">Redo</button>
+            </div>
+          </div>
+        </div>
+        <div class="main-down-container">
+          <!-- <div class="bottom-left-container">
+          </div> -->
+          <div class="bottom-right-container">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Clean speed:</td>
+                  <td class="clean-speed-left">NaN</td>
+                </tr>
+                <tr>
+                  <td>Raw speed:</td>
+                  <td class="raw-speed-left">NaN</td>
+                </tr>
+                <tr>
+                  <td>Accuracy:</td>
+                  <td class="accuracy-left">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>All words:</td>
+                  <td class="all-words">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>Incorrect words:</td>
+                  <td class="incorrect-words">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>All letters:</td>
+                  <td class="all-letters">NaN</td>
+                </tr>
+                <tr class="desktop-only">
+                  <td>Incorrect letters:</td>
+                  <td class="incorrect-letters">NaN</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

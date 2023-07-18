@@ -1,24 +1,114 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Register</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" href="css/login-register.css" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
+    <script src="js/change-theme.js" defer></script>
+    <!-- <script src="@{js/register.js}" defer></script> -->
+    <script src="js/prevent-default-css.js"></script>
+    <title>Keyboard Masters</title>
   </head>
   <body>
-    <h1>Register</h1>
-    <form th:action="@{/register}" th:object="${user}" method="post">
-      <p>Username: <input type="text" th:field="*{username}" /></p>
-      <p>Password: <input type="password" th:field="*{password}" /></p>
-      <p>
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Reset" />
-      </p>
-    </form>
-    <h3>You already have an account?</h3>
-    <a href="/login">Sign In</a>
-
-    <!-- Error message if username already exists -->
-    <div th:if="${registerErrorMessage}" class="error-message">
-      <p th:text="${registerErrorMessage}"></p>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
     </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container">
+          <div class="page-title-container">
+            <p>Register</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <form
+            class="word-display"
+            th:action="@{/register}"
+            th:object="${user}"
+            method="post"
+          >
+            <p>E-mail address:</p>
+            <input
+              class="login-form-input"
+              id="email-input"
+              type="text"
+              placeholder=""
+            />
+            <p>Username:</p>
+            <input
+              class="login-form-input"
+              id="username-input"
+              type="text"
+              th:field="*{username}"
+            />
+            <p>Password:</p>
+            <input
+              class="login-form-input"
+              id="password-input"
+              type="password"
+              th:field="*{password}"
+            />
+            <p>Repeat password:</p>
+            <input
+              class="login-form-input"
+              id="password-check-input"
+              type="password"
+            />
+            <!-- !! modifier ça -->
+            <input class="login-form-button" type="submit" value="Submit" />
+            <span id="email-error" class="error-message-login-register"
+              >E-mail address is not correct!</span
+            >
+            <span
+              id="username-password-error"
+              class="error-message-login-register"
+              >Password or username is too short!</span
+            >
+            <span
+              id="password-does-not-match-error"
+              class="error-message-login-register"
+              >Password does not match!</span
+            >
+          </form>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

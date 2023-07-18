@@ -1,181 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  /* background-color: rgb(0, 0, 28); */
-  background-color: #000;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.section-top {
-  display: flex;
-  align-items: flex-end;
-  height: 8.5vh;
-}
-
-.logo-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 30px;
-}
-
-#logo {
-  color: #fff;
-  font-size: 35px;
-}
-
-.login-register-container {
-  display: flex;
-  justify-content: flex-end;
-  color: white;
-  width: 100%;
-  padding: 0px 40px 8px 0px;
-}
-
-.login-register-container p {
-  color: #e3e3e3;
-}
-
-.login-register-container p a {
-  color: white;
-}
-
-.menu-container {
-  height: 5vh;
-}
-
-.main-menu {
-  /* background: linear-gradient(white, #7b7b7b); */
-  /* background: linear-gradient(#ededed, #7b7b7b); */
-  background: #333333;
-  border-radius: 16px;
-  height: 100%;
-  /* color: white; */
-  display: flex;
-  align-items: center;
-}
-
-.menu-item {
-  flex: 1;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 100%;
-  border: #000 1.5px solid;
-  font-size: 19px;
-  transition: background-color 0.3s; /* Adding transition for smooth effect */
-}
-
-.first-menu-item {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.last-menu-item {
-  border-top-right-radius: 15px; /* Add border radius to the top right corner */
-  border-bottom-right-radius: 15px;
-}
-
-.menu-item:hover {
-  background-color: rgb(68, 68, 68); /* Change the background color on hover */
-}
-
-.menu-item a {
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.main-section {
-  /* background: linear-gradient(#ededed, #a6a6a6); */
-  background: #333333;
-  margin-top: 29px;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 15px;
-  height: 80.5vh;
-}
-
-.main-section-inner-container {
-  padding: 10px 250px 10px 250px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column; /* Change to horizontal layout */
-  /* margin-bottom: 5px; */
-}
-
-.main-upper-container {
-  width: 100%;
-  height: 100%;
-  flex: 1;
-  /* background-color: lightblue; */
-}
-
-.main-center-container {
-  width: 100%;
-  height: 100%;
-  flex: 5;
-  /* background-color: lightgreen; */
-  display: flex;
-  flex-direction: column;
-}
-
-.main-down-container {
-  width: 100%;
-  height: 100%;
-  flex: 3;
-  /* background-color: lightpink; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.time-options-container {
-  background-color: rgb(15, 15, 15);
-  height: 70%;
-  margin-top: 10px;
-  border-radius: 15px;
-  /* Pour centrer le texte */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.time-options-container p {
-  text-align: center;
-  color: white;
-  font-size: 38px;
-  /* justify-content: center; */
-  /* top: 50%; */
-}
-
 .word-display {
   flex: 8;
   border-radius: 15px;
   background-color: rgb(15, 15, 15);
   color: #fff;
-  font-size: 40px;
-  padding: 12px 17px 17px 17px;
-  /* word-spacing: 0.3em; */
+  padding: 5px 17px 17px 17px;
 }
 
 .word-display p {
   margin-top: 10px;
   margin-bottom: 35px;
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .word-display .question-paragraph {
@@ -190,150 +24,32 @@ body {
   color: white;
 }
 
-.word-input-container {
-  margin-top: 10px;
-  flex: 2;
-  border-radius: 15px;
-  /* background-color: rgb(15, 15, 15); */
-  display: flex;
-  /* padding: 15px 15px 15px 15px; */
+@media (min-width: 2200px) {
+  .word-display p {
+    font-size: 41px;
+  }
 }
 
-.word-input {
-  flex: 30;
-  width: 100%;
-  height: 100%;
+@media (max-width: 1800px) {
+  .word-display p {
+    font-size: 27px !important ;
+  }
 }
 
-#word-input {
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  font-size: 33px;
-  background-color: rgb(15, 15, 15);
-  color: white;
-  border-color: transparent;
+@media (max-width: 1600px) {
+  .word-display p {
+    font-size: 22px !important ;
+  }
 }
 
-.redo-button-container {
-  flex: 4;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(15, 15, 15);
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  /* !! For typing training */
-  /* display: none;  */
+@media (max-width: 1500px) {
+  .word-display p {
+    font-size: 20px !important ;
+  }
 }
 
-#timer {
-  display: none;
-  color: white;
-  font-size: 46px;
-}
-
-#redo-button {
-  display: none; /* this should be dynamic  */
-  border: rgb(15, 15, 15);
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  font-size: 30px;
-  margin-right: 10px;
-  background-color: rgb(15, 15, 15);
-  color: white;
-  transition: background-color 0.3s, color 0.3s;
-  cursor: pointer;
-}
-
-#redo-button:hover {
-  background-color: white;
-  color: rgb(15, 15, 15);
-}
-
-#redo-button:active {
-  background-color: gray;
-  color: white;
-}
-
-.down-right-container {
-  flex: 1;
-  background-color: rgb(15, 15, 15);
-  color: white;
-  font-size: 22px;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  margin-right: 14px;
-  padding: 5px 5px 5px 5px;
-}
-.down-right-container p {
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-.down-left-container {
-  flex: 1;
-  background-color: rgb(15, 15, 15);
-  color: white;
-  font-size: 22px;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  padding: 7px 10px 7px 18px;
-  font-size: 26px;
-}
-
-.down-left-container p {
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-.down-left-container table {
-  width: 100%;
-}
-
-.down-left-container table .text-column {
-  text-align: right;
-}
-
-.down-left-container table .number-column {
-  text-align: left;
-}
-
-.down-right-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 40px 10px 80px;
-}
-
-.word-per-minute-container {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-.word-per-minute-container h1 {
-  font-size: 66px;
-}
-
-.accuracy-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.accuracy {
-  text-align: center;
-  font-size: 55px;
-}
-
-.raw-speed {
-  font-size: 43px;
+@media (max-width: 1400px) {
+  .word-display p {
+    font-size: 18px !important ;
+  }
 }

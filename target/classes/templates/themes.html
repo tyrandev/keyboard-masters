@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
+    <script src="js/change-theme.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/prevent-default-css.js"></script>
+    <title>Keyboard Masters</title>
+  </head>
+  <body>
+    <div class="section-top">
+      <div class="logo-container">
+        <h2 id="logo">KeyboardMasters.org</h2>
+      </div>
+      <div class="login-register-container">
+        <p>
+          Click <a href="/login">here</a> to login. You do not have an account?
+          <a href="/register">Register now!</a>
+        </p>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="main-menu">
+        <div class="menu-item first-menu-item">
+          <a href="/index">Home</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_test">Typing Test</a>
+        </div>
+        <div class="menu-item">
+          <a href="/typing_training">Typing Training</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/leaderboard">Leaderboard</a>
+        </div>
+        <div class="menu-item desktop-only">
+          <a href="/themes">Themes</a>
+        </div>
+        <div class="menu-item">
+          <a href="/about">About</a>
+        </div>
+        <div class="menu-item last-menu-item desktop-only">
+          <a href="/account">My Account</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-section-container">
+        <div class="main-top-container">
+          <div class="page-title-container">
+            <p>Themes</p>
+          </div>
+        </div>
+        <div class="main-center-container">
+          <div class="word-display">
+            <div class="themes-grid">
+              <div class="grid-item" id="dark-blue-theme-changer">
+                <div class="photo-container">
+                  <img
+                    rel="preload"
+                    src="img/dark-blue.png"
+                    as="image"
+                    alt=""
+                  />
+                </div>
+                <div class="description-container">
+                  <span>Dark Blue Theme</span>
+                </div>
+              </div>
+              <div class="grid-item" id="dark-grey-theme-changer">
+                <div class="photo-container">
+                  <img rel="preload" src="img/default.png" as="image" alt="" />
+                </div>
+                <div class="description-container">
+                  <span>Dark Grey Theme</span>
+                </div>
+              </div>
+              <div class="grid-item" id="dark-red-theme-changer">
+                <div class="photo-container">
+                  <img rel="preload" src="img/dark-red.png" as="image" alt="" />
+                </div>
+                <div class="description-container">
+                  <span>Dark Red Theme</span>
+                </div>
+              </div>
+              <div class="grid-item" id="light-blue-theme-changer">
+                <div class="photo-container">
+                  <img
+                    rel="preload"
+                    src="img/light-blue.png"
+                    as="image"
+                    alt=""
+                  />
+                </div>
+                <div class="description-container">
+                  <span>Light Blue Theme</span>
+                </div>
+              </div>
+              <div class="grid-item" id="light-pink-theme-changer">
+                <div class="photo-container">
+                  <img
+                    rel="preload"
+                    src="img/light-pink.png"
+                    as="image"
+                    alt=""
+                  />
+                </div>
+                <div class="description-container">
+                  <span>Light Pink Theme</span>
+                </div>
+              </div>
+              <div class="grid-item" id="light-violet-theme-changer">
+                <div class="photo-container">
+                  <img
+                    rel="preload"
+                    src="img/light-violet.png"
+                    as="image"
+                    alt=""
+                  />
+                </div>
+                <div class="description-container">
+                  <span>Light Violet Theme</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
