@@ -63,17 +63,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
-
-// @Override
-// public void addCorsMappings(CorsRegistry registry) {
-// registry.addMapping("/**")
-// .allowedOrigins("https://raw.githubusercontent.com/AndreTyran/words/main/*")
-// // replace with the
-// // allowed origins
-// .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS") // allowed
-// request methods
-// .allowCredentials(true)
-// .maxAge(3600)
-// .allowedHeaders("Authorization", "Cache-Control", "Content-Type"); // allowed
-// headers
-// }

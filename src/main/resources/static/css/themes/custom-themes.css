@@ -2,8 +2,9 @@
 .dark-blue-theme {
   --background-color-body: #000;
   --background-color-container: #000033;
-  --background-color-main: #000066;
-  --background-color-section: #0000cc;
+  --background-color-main: #0000ad;
+  /* --background-color-main: #0000cc; */
+  /* --background-color-main: #000066; */
   --text-color-main: #ffffff;
 }
 
@@ -79,9 +80,9 @@
 /* Dark-red theme */
 .dark-red-theme {
   --background-body-color: #000;
-  --background-color-container: #330000;
-  --background-color-main: #160000;
-  --background-color-section: #cc0000;
+  --background-color-main: #330000;
+  --background-color-container: #160000;
+  /* --background-color-section: #cc0000; */
   --text-color-main: #ffffff;
 }
 
@@ -155,7 +156,7 @@
   --background-color-body: #e6f7ff;
   --background-color-container: #cceeff;
   --background-color-main: #99ddff;
-  --background-color-section: #66ccff;
+  /* --background-color-section: #66ccff; */
   --text-color-main: #000000;
 }
 
@@ -267,7 +268,7 @@
   --background-color-body: #ffe6ea;
   --background-color-container: #ffb3ba;
   --background-color-main: #ff8085;
-  --background-color-section: #ff4d52;
+  /* --background-color-section: #ff4d52; */
   --text-color-main: #000000;
 }
 
@@ -379,7 +380,7 @@
   --background-color-body: #f3e8ff;
   --background-color-container: #e6b3ff;
   --background-color-main: #d17aff;
-  --background-color-section: #be42f5;
+  /* --background-color-section: #be42f5; */
   --text-color-main: #000000;
 }
 

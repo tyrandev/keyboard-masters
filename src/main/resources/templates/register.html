@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <link rel="stylesheet" href="css/login-register.css" />
     <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/login-register.css}" />
     <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
     <script src="js/change-theme.js" defer></script>
     <!-- <script src="@{js/register.js}" defer></script> -->
@@ -76,10 +76,9 @@
               th:field="*{password}"
               class="login-form-input"
             />
-            <p>
-              <input type="submit" value="Submit" class="login-form-button" />
-              <!-- <input type="reset" value="Reset" /> -->
-            </p>
+
+            <input type="submit" value="Submit" class="login-form-button" />
+
             <!-- Error message if username already exists -->
             <div th:if="${registerErrorMessage}" class="error-message">
               <p th:text="${registerErrorMessage}"></p>

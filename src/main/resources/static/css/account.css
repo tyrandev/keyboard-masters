@@ -21,11 +21,11 @@
 }
 
 .test-history tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
 }
 
 .test-history tbody tr:hover {
-  background-color: #898989;
+  background-color: #8989893f;
   cursor: pointer;
 }
 

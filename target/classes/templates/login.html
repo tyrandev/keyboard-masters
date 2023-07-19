@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <link rel="stylesheet" href="css/login-register.css" />
     <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/login-register.css}" />
     <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
     <!-- <script src="js/login.js" defer></script> -->
     <script src="js/change-theme.js" defer></script>
@@ -58,29 +58,26 @@
           </div>
         </div>
         <div class="main-center-container">
-          <form class="word-display" action="/login" method="post">
+          <form action="/login" method="post" class="word-display">
             <p>Username:</p>
             <input
-              class="login-form-input"
-              name="username"
-              id="username-input"
               type="text"
+              name="username"
               placeholder=""
+              class="login-form-input"
             />
             <p>Password:</p>
             <input
-              class="login-form-input"
-              name="password"
-              id="password-input"
               type="password"
+              name="password"
               placeholder=""
+              class="login-form-input"
             />
-            <button class="login-form-button" type="submit" value="Log In">
-              Login
-            </button>
-            <!-- TODO: make this work!!! -->
-            <div th:if="${param.error}" class="error-message-login-register">
-              Invalid username or password.
+
+            <input type="submit" value="Log In" class="login-form-button" />
+
+            <div th:if="${param.error}">
+              <p>Invalid username or password.</p>
             </div>
           </form>
         </div>

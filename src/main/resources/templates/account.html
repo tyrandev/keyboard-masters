@@ -62,7 +62,6 @@
         </div>
         <div class="main-center-container">
           <div class="word-display">
-            <h2>Test history</h2>
             <!-- history of typing tests -->
             <table class="test-history">
               <thead>
@@ -81,7 +80,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr th:each="test : ${typingTests}">
+                <tr
+                  th:each="test, stat : ${typingTests}"
+                  th:if="${stat.count <= 10}"
+                >
                   <!-- <td th:text="${test.id}"></td> -->
                   <td th:text="${test.timeInSeconds}">60</td>
                   <td th:text="${test.cleanTypingSpeed}">120</td>
