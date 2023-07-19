@@ -302,6 +302,11 @@ function endGame() {
 }
 
 function submitTypingTest(data) {
+  // Check if data is valid
+  if (data.allWords <= 0 || data.cleanTypingSpeed <= 0) {
+    return;
+  }
+
   $.ajax({
     url: "/typing-test",
     type: "post",
