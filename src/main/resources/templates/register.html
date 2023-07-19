@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/login-register.css}" />
     <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
     <script src="js/change-theme.js" defer></script>
-    <!-- <script src="@{js/register.js}" defer></script> -->
+    <script src="js/register.js" defer></script>
     <script src="js/prevent-default-css.js"></script>
     <title>Keyboard Masters</title>
   </head>
@@ -69,16 +69,22 @@
               type="text"
               th:field="*{username}"
               class="login-form-input"
+              id="username-input"
             />
             <p>Password:</p>
             <input
               type="password"
               th:field="*{password}"
               class="login-form-input"
+              id="password-input"
             />
 
-            <input type="submit" value="Submit" class="login-form-button" />
-
+            <!-- TODO: disable this input if username and password inputs do not have more than 4 letters -->
+            <input
+              type="submit"
+              value="Submit"
+              class="login-form-button login-form-button-disabled"
+            />
             <!-- Error message if username already exists -->
             <div th:if="${registerErrorMessage}" class="error-message">
               <p th:text="${registerErrorMessage}"></p>

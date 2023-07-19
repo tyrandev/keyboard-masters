@@ -75,6 +75,23 @@
   cursor: pointer;
 }
 
+.login-form-button-disabled {
+  border: #66666641;
+  background-color: #6666662c;
+  color: #aaa;
+  font-size: 30px;
+  border-radius: 12px;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+}
+
 .error-message-login-register {
   margin-top: 20px;
   color: red;
@@ -85,27 +102,3 @@
   margin-right: auto;
   display: none;
 }
-
-/* @media (max-width: 1800px) {
-  .word-display p {
-    font-size: 27px !important ;
-  }
-}
-
-@media (max-width: 1600px) {
-  .word-display p {
-    font-size: 22px !important ;
-  }
-}
-
-@media (max-width: 1500px) {
-  .word-display p {
-    font-size: 20px !important ;
-  }
-}
-
-@media (max-width: 1400px) {
-  .word-display p {
-    font-size: 18px !important ;
-  }
-} */
