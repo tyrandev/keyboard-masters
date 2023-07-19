@@ -1,3 +1,16 @@
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #8989893f;
+  /* cursor: pointer; */
+}
+
+td {
+  border: 1px solid #ccc;
+}
+
 .test-history {
   width: 100%;
   border-collapse: collapse;
@@ -26,7 +39,7 @@
 
 .test-history tbody tr:hover {
   background-color: #8989893f;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .test-history td,

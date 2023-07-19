@@ -286,7 +286,7 @@ function endGame() {
     timeInSeconds: 60,
     cleanTypingSpeed: cleanSpeed,
     rawTypingSpeed: rawSpeed,
-    accuracy: rawSpeed,
+    accuracy: accuracy,
     allWords: allWords,
     incorrectWords: incorrectWords,
     allLetters: allLetters,

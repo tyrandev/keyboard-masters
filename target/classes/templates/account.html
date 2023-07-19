@@ -8,8 +8,10 @@
     <link rel="stylesheet" th:href="@{/css/upper-section.css}" />
     <link rel="stylesheet" th:href="@{/css/themes/custom-themes.css}" />
     <link rel="stylesheet" th:href="@{/css/account.css}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/change-theme.js" defer></script>
     <script src="js/prevent-default-css.js"></script>
+    <script src="js/account.js"></script>
     <title>Keyboard Masters</title>
   </head>
   <body>
@@ -67,7 +69,7 @@
               <thead>
                 <tr>
                   <!-- <th>Test ID</th> -->
-                  <th>Time in Seconds</th>
+                  <!-- <th>Time in Seconds</th> -->
                   <th>Clean Typing Speed</th>
                   <th>Raw Typing Speed</th>
                   <th>Accuracy</th>
@@ -80,12 +82,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr
-                  th:each="test, stat : ${typingTests}"
-                  th:if="${stat.count <= 10}"
-                >
+                <tr th:each="test, stat : ${typingTests}">
                   <!-- <td th:text="${test.id}"></td> -->
-                  <td th:text="${test.timeInSeconds}">60</td>
+                  <!-- <td th:text="${test.timeInSeconds}">60</td> -->
                   <td th:text="${test.cleanTypingSpeed}">120</td>
                   <td th:text="${test.rawTypingSpeed}">60</td>
                   <td th:text="${test.accuracy}">95.25%</td>
