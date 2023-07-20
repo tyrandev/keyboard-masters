@@ -1,0 +1,12 @@
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/service/UserService.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/controller/MainController.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/controller/UserController.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/service/TypingTestService.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/model/TypingTest.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/model/User.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/StartApplication.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/controller/AdminController.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/configuration/SecurityConfig.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/controller/TypingTestController.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/repository/TypingTestRepository.java
+/home/mad/Development/java-projects/java-spring/my-projects/keyboard-masters/keyboard-masters/src/main/java/com/example/keyboardmasters/repository/UserRepository.java
