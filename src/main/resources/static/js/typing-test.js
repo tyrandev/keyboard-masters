@@ -47,8 +47,6 @@ async function fetchWords(wordsChosen) {
       (word) => word.trim().toLowerCase()
       // .replace(/[^a-z]/g, "")
     );
-    // fetchedWords = transformWords(fetchedWords);
-    console.log(fetchedWords);
   } catch (error) {
     console.error("Error fetching words:", error);
   }
