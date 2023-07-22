@@ -139,7 +139,6 @@ let timerIntervalId = null;
 
 function startTimer() {
   let timer = GAME_TIME_IN_SECONDS;
-  // Set initial timer display
   selectors.timerElement.textContent = formatTime(timer);
 
   timerIntervalId = setInterval(() => {
@@ -168,7 +167,7 @@ function stopTimer() {
 
 function resetTimer() {
   let timer = GAME_TIME_IN_SECONDS;
-  selectors.timerElement.textContent = timer;
+  selectors.timerElement.textContent = formatTime(timer);
 }
 
 function setGameReady() {

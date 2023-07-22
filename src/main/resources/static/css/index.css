@@ -21,6 +21,15 @@
   color: white;
 }
 
+.logo-container {
+  display: flex;
+  display: row;
+}
+
+.logo-image {
+  margin-right: 20px;
+}
+
 @media (min-width: 2200px) {
   .word-display p {
     font-size: 36px;
