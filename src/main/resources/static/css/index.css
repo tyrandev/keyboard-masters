@@ -38,24 +38,24 @@
 
 @media (max-width: 1800px) {
   .word-display p {
-    font-size: 27px !important ;
+    font-size: 23px;
   }
 }
 
 @media (max-width: 1600px) {
   .word-display p {
-    font-size: 22px !important ;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 1500px) {
   .word-display p {
-    font-size: 20px !important ;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 1400px) {
   .word-display p {
-    font-size: 18px !important ;
+    font-size: 18px;
   }
 }
