@@ -37,7 +37,7 @@
   background-color: var(--background-color-container);
 }
 
-.dark-blue-theme .bottom-right-container {
+.dark-blue-theme .results-information-container {
   background-color: var(--background-color-container);
 }
 
@@ -115,7 +115,7 @@
   background-color: var(--background-color-container);
 }
 
-.dark-red-theme .bottom-right-container {
+.dark-red-theme .results-information-container {
   background-color: var(--background-color-container);
 }
 
@@ -193,7 +193,7 @@
   background-color: var(--background-color-container);
 }
 
-.light-blue-theme .bottom-right-container {
+.light-blue-theme .results-information-container {
   background-color: var(--background-color-container);
 }
 
@@ -252,7 +252,7 @@
 .light-blue-theme .developer-info a,
 .light-blue-theme .select-settings,
 .light-blue-theme .main-down-container .bottom-left-container,
-.light-blue-theme .main-down-container .bottom-right-container,
+.light-blue-theme .main-down-container .results-information-container,
 .light-blue-theme #logo,
 .light-blue-theme #timer,
 .light-blue-theme .login-register-container p,
@@ -305,7 +305,7 @@
   background-color: var(--background-color-container);
 }
 
-.light-pink-theme .bottom-right-container {
+.light-pink-theme .results-information-container {
   background-color: var(--background-color-container);
 }
 
@@ -364,7 +364,7 @@
 .light-pink-theme .developer-info a,
 .light-pink-theme .select-settings,
 .light-pink-theme .main-down-container .bottom-left-container,
-.light-pink-theme .main-down-container .bottom-right-container,
+.light-pink-theme .main-down-container .results-information-container,
 .light-pink-theme #logo,
 .light-pink-theme #timer,
 .light-pink-theme .login-register-container p,
@@ -417,7 +417,7 @@
   background-color: var(--background-color-container);
 }
 
-.light-violet-theme .bottom-right-container {
+.light-violet-theme .results-information-container {
   background-color: var(--background-color-container);
 }
 
@@ -476,7 +476,7 @@
 .light-violet-theme .developer-info a,
 .light-violet-theme .select-settings,
 .light-violet-theme .main-down-container .bottom-left-container,
-.light-violet-theme .main-down-container .bottom-right-container,
+.light-violet-theme .main-down-container .results-information-container,
 .light-violet-theme #logo,
 .light-violet-theme #timer,
 .light-violet-theme .login-register-container p,

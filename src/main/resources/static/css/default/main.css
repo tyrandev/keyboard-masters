@@ -17,7 +17,8 @@ body {
 
 .main-section {
   background: #333333;
-  margin-top: 29px;
+  /* margin-top: 29px; */
+  margin-top: 1.6%;
   margin-left: 2px;
   margin-right: 2px;
   border-radius: 15px;
@@ -50,7 +51,8 @@ body {
 .page-title-container {
   background-color: rgb(15, 15, 15);
   height: 70%;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin-top: 0.5%;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -60,7 +62,16 @@ body {
 .page-title-container p {
   text-align: center;
   color: white;
-  font-size: 38px;
+  font-size: 36px;
+  /* !! Problem: this should resize automatically */
+  /* font-size: 2.5rem; */
+  /* font-size: 2vw; */
+}
+
+@media (max-width: 1500px) {
+  .page-title-container p {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 450px) {
