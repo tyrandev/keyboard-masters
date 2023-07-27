@@ -276,9 +276,7 @@
 }
 
 @media (max-width: 1800px) {
-  /* .word-display p {
-    font-size: 27px;
-  } */
+  /*  */
 }
 
 @media (max-width: 1600px) {
@@ -296,12 +294,16 @@
   .word-display {
     font-size: 30px;
   }
+  .page-title-container p {
+    font-size: 28px;
+  }
+  /* .main-section-container .main-top-container {
+    display: none;
+  } */
 }
 
 @media (max-width: 1400px) {
-  /* .word-display p {
-    font-size: 18px;
-  } */
+  /*  */
 }
 
 @media (max-width: 450px) {

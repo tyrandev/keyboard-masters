@@ -19,13 +19,13 @@
   border-bottom-right-radius: 15px;
 }
 
+#words-visible-slider {
+  margin-left: 0.5%;
+}
+
 #word-length-slider {
   width: 200px; /* you can adjust this as needed */
   margin: 10px 0;
-}
-
-#words-visible-slider {
-  margin-left: 0.5%;
 }
 
 #word-length-slider {
