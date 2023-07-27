@@ -5,7 +5,7 @@ let wordsToFetch = "word-databases/english-4k.txt";
 
 // Selectors
 const wordDisplay = document.querySelector(".word-display");
-const wordInput = document.querySelector("#word-input");
+let wordInput = document.querySelector("#word-input");
 const selectors = {
   allWords: document.querySelector(".all-words"),
   incorrectWords: document.querySelector(".incorrect-words"),
@@ -173,6 +173,7 @@ function resetTimer() {
 function setGameReady() {
   selectors.redoButton.style.display = "none";
   selectors.timerElement.style.display = "block";
+  cleanWordInput();
 }
 
 //Game logic
@@ -243,7 +244,7 @@ wordInput.addEventListener("input", (event) => {
 
   // Prepare for the next word
   wordToCompareIndex++;
-  wordInput.value = "";
+  cleanWordInput();
   currentWordElement.classList.remove("current-word", "incorrect-current-word"); // remove the word highlighting
 
   // Highlight the next word
@@ -265,8 +266,12 @@ function areWordsFinished() {
   }
 }
 
-function endGame() {
+function cleanWordInput() {
   wordInput.value = "";
+}
+
+function endGame() {
+  cleanWordInput();
   let timeDurationGame = (performance.now() - startTime) / 60000; // Convert to minutes
   console.log("timer ends");
   allWords = correctWords + incorrectWords;
