@@ -5,7 +5,7 @@ const LINK_TO_DATABASE =
 document.addEventListener("DOMContentLoaded", function () {
   var languageSelect = document.getElementById("typing-language");
   if (languageSelect) {
-    languageSelect.addEventListener("change", updateLanguage);
+    languageSelect.addEventListener("change", getAllWordDatabases);
   }
 
   // Event listener for dataset change
@@ -100,7 +100,7 @@ let languageDatasets = {
   Polish: ["polish-200", "polish-500", "polish-1k"],
 };
 
-function updateLanguage() {
+function getAllWordDatabases() {
   var languageSelect = document.getElementById("typing-language");
   var selectedLanguage =
     languageSelect.value.charAt(0).toUpperCase() +
@@ -187,3 +187,6 @@ function addRandomNumbers(word) {
   // Add a random number at the end of the word
   return word + Math.floor(Math.random() * 10);
 }
+
+// BUG: quantity of words is doubled fist time it is loaded
+// getAllWordDatabases();
