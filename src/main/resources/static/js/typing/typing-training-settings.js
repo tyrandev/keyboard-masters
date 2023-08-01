@@ -179,7 +179,7 @@ function capitalizeFirstLetter(word) {
 
 function addRandomPunctuation(word) {
   // Add random punctuation at the end of the word
-  const punctuations = [".", ",", "!", "?"];
+  const punctuations = [".", ",", "!", "?", "-", "+", "=", "*", ";", ":"];
   return word + punctuations[Math.floor(Math.random() * punctuations.length)];
 }
 
