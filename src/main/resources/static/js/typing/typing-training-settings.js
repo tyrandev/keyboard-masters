@@ -179,14 +179,20 @@ function capitalizeFirstLetter(word) {
 
 function addRandomPunctuation(word) {
   // Add random punctuation at the end of the word
-  const punctuations = [".", ",", "!", "?", "-", "+", "=", "*", ";", ":"];
+  const punctuations = [".", ",", "!", "?", "-", "+", "=", "*", ";", ":", "/"];
   return word + punctuations[Math.floor(Math.random() * punctuations.length)];
 }
 
 function addRandomNumbers(word) {
-  // Add a random number at the end of the word
-  return word + Math.floor(Math.random() * 10);
-}
+  // Generate a number from 1 to 4, which will be the count of digits to append
+  let countOfDigits = Math.floor(Math.random() * 4) + 1;
 
+  // Append the countOfDigits random digits to the end of the word
+  for (let i = 0; i < countOfDigits; i++) {
+    word += Math.floor(Math.random() * 10);
+  }
+
+  return word;
+}
 // BUG: quantity of words is doubled fist time it is loaded
 // getAllWordDatabases();
