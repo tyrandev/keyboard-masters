@@ -194,5 +194,6 @@ function addRandomNumbers(word) {
 
   return word;
 }
+
 // BUG: quantity of words is doubled fist time it is loaded
 // getAllWordDatabases();
