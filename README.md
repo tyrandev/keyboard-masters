@@ -126,6 +126,7 @@ sudo rm /etc/nginx/sites-enabled/keyboardmasters.org
 sudo rm /etc/nginx/sites-available/keyboardmasters.org
 
 # run project:
+```bash
 git clone https://github.com/tyrandev/keyboard-masters.git
 cd keyboard-masters
 ./mvnw clean install
@@ -135,7 +136,8 @@ cd keyboard-masters
 ./mvnw spring-boot:run
 nohup ./mvnw spring-boot:run > keyboard-masters.log 2>&1 &
 nohup ./mvnw spring-boot:run > /dev/null 2>&1 &
-
+```
 # alternativelly go run target and execute this command to run
-
+```bash
 nohup java -jar keyboard-masters-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+```
