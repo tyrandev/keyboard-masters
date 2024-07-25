@@ -64,6 +64,7 @@ echo $JAVA_HOME
 update-alternatives --config java
 
 # create mysql required for application to work:
+```mysql
 sudo mysql -u root -p
 CREATE DATABASE http_session_database;
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
@@ -73,7 +74,7 @@ FLUSH PRIVILEGES;
 CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 GRANT ALL PRIVILEGES ON http_session_database.* TO 'myuser'@'localhost';
 FLUSH PRIVILEGES;
-
+```
 sudo apt install nginx
 
 # configure nginx:
