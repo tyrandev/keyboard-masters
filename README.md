@@ -11,10 +11,6 @@ https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
 https://www.youtube.com/watch?v=iGUNEnFZOgE
 https://studygyaan.com/spring-boot/deploy-spring-boot-app-on-vm-using-nginx-https-domain
 
-# go to run target and execute this command to run
-
-nohup java -jar keyboard-masters-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
-
 sudo apt update && sudo apt-get upgrade -y
 sudo apt install git
 sudo apt install maven
@@ -78,18 +74,6 @@ CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 GRANT ALL PRIVILEGES ON http_session_database.* TO 'myuser'@'localhost';
 FLUSH PRIVILEGES;
 
-
-# run project:
-git clone https://github.com/tyrandev/keyboard-masters.git
-cd keyboard-masters
-./mvnw clean install
-./mvnw test
-./mvnw package
-./mvnw spring-boot:run
-nohup ./mvnw spring-boot:run > keyboard-masters.log 2>&1 &
-nohup ./mvnw spring-boot:run > /dev/null 2>&1 &
-
-
 sudo apt install nginx
 
 # configure nginx:
@@ -140,3 +124,18 @@ sudo certbot --nginx -d www.keyboardmasters.org
 sudo certbot delete --cert-name www.keyboardmasters.org
 sudo rm /etc/nginx/sites-enabled/keyboardmasters.org
 sudo rm /etc/nginx/sites-available/keyboardmasters.org
+
+# run project:
+git clone https://github.com/tyrandev/keyboard-masters.git
+cd keyboard-masters
+./mvnw clean install
+./mvnw test
+./mvnw compile
+./mvnw package
+./mvnw spring-boot:run
+nohup ./mvnw spring-boot:run > keyboard-masters.log 2>&1 &
+nohup ./mvnw spring-boot:run > /dev/null 2>&1 &
+
+# alternativelly go run target and execute this command to run
+
+nohup java -jar keyboard-masters-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
