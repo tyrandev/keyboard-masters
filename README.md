@@ -52,6 +52,11 @@ sudo apt install mysql-server
 sudo systemctl start mysql.service
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password12';
 exit
+CREATE DATABASE http_session_database;
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
+GRANT ALL PRIVILEGES ON http_session_database.* TO 'myuser'@'localhost';
+FLUSH PRIVILEGES;
+exit
 sudo mysql_secure_installation
 mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
